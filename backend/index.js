@@ -17,9 +17,12 @@ app.use((req, res, next) => {
 });
 
 app.get("/meals", async (req, res) => {
-  const meals = "[]" // data should be read from file
-  res.json(JSON.parse(meals));
+  const data = await fs.readFile('data/meals.json', 'utf8')
+  const meals = JSON.parse(data);
+  res.json(meals);
+  console.log(meals);
 });
+
 
 app.use((req, res) => {
   if (req.method === "OPTIONS") {
