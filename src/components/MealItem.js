@@ -14,8 +14,8 @@ function MealItem(props) {
                     {style: 'currency', currency: 'EUR'}).format(props.meal.price)}</p>
                     <p className='meal-item-description'>{props.meal.description}</p>
                 </div>
-                <p>
-                    <button className='meal-item-actions'>Add to Cart</button>
+                <p className='meal-item-actions'>
+                    <button class='button'>Add to Cart</button>
                 </p>
             </article>
         </li>
